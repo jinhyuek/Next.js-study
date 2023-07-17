@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import Link from "next/link";
 import styles from "./layout.module.css";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,8 +19,9 @@ export default function RootLayout({
         <header className={styles.header}>
           <h1>Demo Note App</h1>
           <nav className={styles.nav}>
-            <a href="">Contact</a>
-            <a href="">About</a>
+            <Link href="/contact">Contact</Link>
+            <Link href="/about">About</Link>
+            <Link href="/products">Products</Link>
           </nav>
         </header>
         {children}
